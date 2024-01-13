@@ -167,5 +167,60 @@ int main() {
         // Display the result
         printf("Result: %f\n", result);
 
+         } while (choice != 0);
+
+    return 0;
+}
+
+// Implement the functions for basic, trigonometric, algebraic, and logarithmic operations
+float add(float a, float b) {
+    return a + b;
+}
+
+float subtract(float a, float b) {
+    return a - b;
+}
+
+float multiply(float a, float b) {
+    return a * b;
+}
+
+float divide(float a, float b) {
+    if (b != 0) {
+        return a / b;
+    } else {
+        printf("Error: Division by zero\n");
+        return 0;
+    }
+}
+
+float sine(float angle) {
+    return sin(angle * M_PI / 180.0);
+}
+
+float cosine(float angle) {
+    return cos(angle * M_PI / 180.0);
+}
+
+float tangent(float angle) {
+    return tan(angle * M_PI / 180.0);
+}
+
+float arcsine(float value) {
+    return asin(value) * 180.0 / M_PI;
+}
+
+float arccosine(float value) {
+    return acos(value) * 180.0 / M_PI;
+}
+
+float arctangent(float value) {
+    return atan(value) * 180.0 / M_PI;
+}
+
+float exponentiation(float base, float exponent) {
+    return pow(base, exponent);
+}
+
 
 
