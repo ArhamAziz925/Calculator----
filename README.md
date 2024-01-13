@@ -60,5 +60,112 @@ int main() {
         printf("Enter your choice (0-19): ");
         scanf("%d", &choice);
 
+          // Perform selected operation
+        switch (choice) {
+            case 1:
+                printf("Enter two numbers: ");
+                scanf("%f %f", &num1, &num2);
+                result = add(num1, num2);
+                break;
+            case 2:
+                printf("Enter two numbers: ");
+                scanf("%f %f", &num1, &num2);
+                result = subtract(num1, num2);
+                break;
+            case 3:
+                printf("Enter two numbers: ");
+                scanf("%f %f", &num1, &num2);
+                result = multiply(num1, num2);
+                break;
+            case 4:
+                printf("Enter two numbers: ");
+                scanf("%f %f", &num1, &num2);
+                result = divide(num1, num2);
+                break;
+            case 5:
+                printf("Enter angle in degrees: ");
+                scanf("%f", &num1);
+                result = sine(num1);
+                break;
+            case 6:
+                printf("Enter angle in degrees: ");
+                scanf("%f", &num1);
+                result = cosine(num1);
+                break;
+            case 7:
+                printf("Enter angle in degrees: ");
+                scanf("%f", &num1);
+                result = tangent(num1);
+                break;
+            case 8:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = arcsine(num1);
+                break;
+            case 9:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = arccosine(num1);
+                break;
+            case 10:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = arctangent(num1);
+                break;
+            case 11:
+                printf("Enter base and exponent: ");
+                scanf("%f %f", &num1, &num2);
+                result = exponentiation(num1, num2);
+                break;
+            case 12:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = square_root(num1);
+                break;
+            case 13:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = cube_root(num1);
+                break;
+            case 14:
+                printf("Enter value and root (e.g., 9 2 for square root): ");
+                scanf("%f %f", &num1, &num2);
+                result = nth_root(num1, num2);
+                break;
+            case 15:
+                printf("Enter an integer: ");
+                scanf("%f", &num1);
+                result = factorial((int)num1);
+                break;
+            case 16:
+                printf("Enter a number: ");
+                scanf("%f", &num1);
+                result = absolute_value(num1);
+                break;
+            case 17:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = logarithm_base_10(num1);
+                break;
+            case 18:
+                printf("Enter value: ");
+                scanf("%f", &num1);
+                result = natural_logarithm(num1);
+                break;
+            case 19:
+                printf("Enter value and base: ");
+                scanf("%f %f", &num1, &num2);
+                result = custom_base_logarithm(num1, num2);
+                break;
+            case 0:
+                printf("Exiting calculator. Goodbye!\n");
+                break;
+            default:
+                printf("Invalid choice. Please enter a valid option.\n");
+        }
+
+        // Display the result
+        printf("Result: %f\n", result);
+
 
 
