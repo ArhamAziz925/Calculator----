@@ -222,5 +222,55 @@ float exponentiation(float base, float exponent) {
     return pow(base, exponent);
 }
 
+float square_root(float value) {
+    return sqrt(value);
+}
+
+float cube_root(float value) {
+    return cbrt(value);
+}
+
+float nth_root(float value, float n) {
+    return pow(value, 1.0 / n);
+}
+
+float factorial(int n) {
+    if (n < 0) {
+        printf("Error: Factorial undefined for negative numbers\n");
+        return 0;
+    }
+
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+
+    float result = 1;
+    for (int i = 2; i <= n; ++i) {
+        result *= i;
+    }
+
+    return result;
+}
+
+float absolute_value(float value) {
+    return fabs(value);
+}
+
+float logarithm_base_10(float value) {
+    return log10(value);
+}
+
+float natural_logarithm(float value) {
+    return log(value);
+}
+
+float custom_base_logarithm(float value, float base) {
+    if (value <= 0 || base <= 0 || base == 1) {
+        printf("Error: Logarithm undefined for given inputs\n");
+        return 0;
+    }
+
+    return log(value) / log(base);
+}
 
 
